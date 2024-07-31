@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+    <title>Fleycout</title>
+</head>     
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Fleycout</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Catalogo</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Factura Electronica
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">carrito</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+
+    <header>
+        <h1>Logo</h1>
+    </header>
+
+    <div class="container_title">T-Shirt</div>
+
+    <main>
+
+        <div class="container_img">
+
+            <img src="./Imagenes/Camisa1_Atrasero.jpg" alt="imagen_Producto">
+
+        </div>    
+
+            <div class="container-info-product">
+                <div class="price">
+                    <span>$20.99</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+
+                <div class="container-details-product">
+                    <div class="formulario">
+                        <label for="colour">Color</label>
+                        <select name="colour" id="colour">
+                            <option disabled selected value="">Escoge una opción</option>
+                            <option value="rojo">Rojo</option>
+                            <option value="Azul">Azul</option>
+                            <option value="Negro">Negro</option>
+                        </select>
+                    </div>
+
+
+                    <div class="formulario">
+                        <label for="Size">Talla</label>
+                        <select name="Size" id="Size">
+                            <option disabled selected value="">Escoge una opción</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <button class="btn_clean">Limpiar</button>
+                </div>
+
+
+
+                <div class="container-add-card">
+                    <div class="container-quantity">
+                        <input type="number" placeholder="1" value="1" min="1" class="input-quantity">
+
+                        <div class="btn-increment-decrement">
+                            <i class="fa-solid fa-chevron-up" id="increment"></i>
+                            <i class="fa-solid fa-chevron-down" id="decrement"></i>
+                        </div>
+
+                    </div>
+
+                    <button class="btn-add-to-cart">
+                    <i class="fa-solid fa-plus"></i>
+                    Añadir al carrito
+                </button>
+                    
+                </div>
+
+            <div class="container-description">
+                <div class="title-description">
+                    <h4>Descripción</h4>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="text-description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, vel recusandae deleniti nobis tempora tempore temporibus totam, consequuntur iste fuga similique qui hic id velit, quidem deserunt expedita! Nulla, commodi!</p>
+                </div>
+            </div>
+
+            <div class="container-additional-information">
+                <div class="title-additional-information">
+                    <h4>Información adicional</h4>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            <div class="text-additional-information">
+                <p>------------------------</p>
+            </div>
+            </div>
+
+            <!-- otra parte -->
+
+            <div class="container-reviews">
+                <div class="title-reviews">
+                    <h4>Reseñas</h4>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            <div class="text-reviews">
+                <p>------------------------</p>
+            </div>
+            </div>
+
+            <div class="container-social">
+                <span>Compartir</span>
+                <div class="container-buttons-social">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i></a>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="container-related-products">
+        <h2>Productos Relacionados</h2>
+        <div class="card-list-products">
+            <div class="card">
+                <div class="card-img">
+                    <img src="./Imagenes_de_Marca/Gorro.jpg" alt="Camisas">
+                </div>
+                <div class="info-card">
+                    <div class="text-product">
+                        <h3>Fleycout CAP</h3>
+                        <p class="category">Footwear, Cap</p>
+                    </div>
+                    <div class="price">$10.99</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="./Imagenes_de_Marca/Gorra.jpg" alt="Camisas">
+                </div>
+                <div class="info-card">
+                    <div class="text-product">
+                        <h3>Fleycout CAP</h3>
+                        <p class="category">Footwear, Cap</p>
+                    </div>
+                    <div class="price">$10.99</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="./Imagenes_de_Marca/camisa.jpg" alt="Camisas">
+                </div>
+                <div class="info-card">
+                    <div class="text-product">
+                        <h3>Fleycout T-Shirt</h3>
+                        <p class="category">Footwear, T-shirt</p>
+                    </div>
+                    <div class="price">$20.99</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="./Imagenes/Camisa2_Trasero.jpg" alt="Camisas">
+                </div>
+                <div class="info-card">
+                    <div class="text-product">
+                        <h3>Fleycout T-Shirt</h3>
+                        <p class="category">Footwear, T-shirt</p>
+                    </div>
+                    <div class="price">$20.99</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+<footer class=" text-dark pt-5 pb-4">
+
+    <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold ">Nosotros</h5>
+                <hr class="mb-4">
+                <p>
+                    Somos una tienda que surgio en el año 2020 a causa de la pandemia decidimos buscar una forma de
+                    invertir nuestro tiempo y lograr generar un ingreso extra para sobresalir, nos dedicamos a la
+                    venta de prendas de alta calidad con diseños unicos y llamativos para los usuarios
+                </p>
+
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold ">Dejanos ayudarte</h5>
+                <hr class="mb-4">
+                <p>
+                    <a href="#" class="text-dark">Productos</a>
+
+                </p>
+                <p>
+                    <a href="#" class="text-dark">Tu carrito</a>
+                </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold ">Ayuda</h5>
+                <hr class="mb-4">
+                <p>
+                    <a href="#" class="text-dark">Preguntas Frecuentes</a>
+
+                </p>
+                <p>
+                    <a href="#" class="text-dark">Contactanos</a>
+                </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold ">Contacto</h5>
+                <hr class="mb-4">
+                <p>
+                    <li class="fas fa-home me-3"></li> Costa Rica, Grecia 20305
+                </p>
+                <p>
+                    <li class="fas fa-envelope me-3"></li> fleycout@gmail.com
+                </p>
+                <p>
+                    <li class="fas fa-phone me-3"></li> +506 88888888
+                </p>
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="text-center mb-2">
+                <p>
+                    &copy; Todos los derechos reservados
+                    <a href="#">
+                        <strong>Bryan Soto</strong>
+                        <strong>Dylan Chacon</strong>
+                    </a>
+                </p>
+            </div>
+
+            <div class="text-center">
+                <ul class="list-unstyled list-inline">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/profile.php?id=100011063948125&locale=" target="_blank"
+                            class="text-dark"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" target="_blank" class="text-dark"><i class="fab fa-whatsapp"></i></a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f2d7b0b53b.js" crossorigin="anonymous"></script>
+    <script src="Index.js"></script>
+    
+</body>
+</html>
