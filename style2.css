@@ -1,0 +1,102 @@
+footer {
+    background-color: #f5e4dc !important;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-size: 17px;
+
+}
+
+p {
+    font-size: 17px;
+}
+
+a:hover {
+    color: #026852 !important
+}
+
+i {
+    font-size: 25px;
+}
+
+h5,
+h2 {
+    color: #026852 !important
+}
+
+strong {
+    color: #026852;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.container-main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-image {
+    width: 100%;
+    max-width: 400px;
+}
+
+.product-details {
+    margin-left: 1rem;
+}
+
+.product-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.form-control-quantity {
+    width: 80px;
+}
+
+.card-related-products {
+    max-width: 250px;
+    margin: auto;
+}
+
+.related-products-title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.card-related-products img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.navbar {
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.product-card {
+    background-color: #f5e4dc !important;
+}
+
+.btn-success{
+background-color: #026852 ;
+}
+
+.precio {
+    font-size: 40px;
+    font-weight: bold;
+    
+}
