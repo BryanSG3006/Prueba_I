@@ -10,64 +10,73 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-
+  <style>
+    .nav-custom {
+      font-size: 1.25rem;
+      /* Cambia el tamaño de la fuente según sea necesario */
+      font-weight: bold;
+    }
+  </style>
 
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript" src="Popularidad.js"></script>
 
 
-  <style>
-    .container-fluid {
-      background-color: #026852;
-    }
-  </style>
+
   <title>Inicio</title>
 </head>
 
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Fleycout</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Catalogo</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Factura Electronica
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">carrito</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #f5e4dc;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Fleycout</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Catalogo</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Factura Electronica
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">carrito</a>
+            </li>
+          </ul>
+          <!-- <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+
+
+
+  </header>
 
 
   <!-- Carrusel -->
@@ -164,69 +173,63 @@
         </div>
       </div>
 
-        <div class="col">
-        
-          <div class="card shadow-sm text-center" style="width: 18rem;">
-            <img src="./Imagenes_de_Marca/Sudadera.jpeg" class="card-img-top" alt="Camisa1">
-            <div class="card-body">
-              <h5 class="card-title">Sudaderas</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="descripcionD.html" class="btn btn-primary">Comprar ya</a>
-            </div>
-        
+      <div class="col">
+
+        <div class="card shadow-sm text-center" style="width: 18rem;">
+          <img src="./Imagenes_de_Marca/Sudadera.jpeg" class="card-img-top" alt="Camisa1">
+          <div class="card-body">
+            <h5 class="card-title">Sudaderas</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="descripcionD.html" class="btn btn-primary">Comprar ya</a>
           </div>
-        </div>
 
-        <div class="col">
-        
-          <div class="card shadow-sm text-center" style="width: 18rem;">
-            <img src="./Imagenes_de_Marca/Sudadera.jpeg" class="card-img-top" alt="Camisa1">
-            <div class="card-body">
-              <h5 class="card-title">Sudaderas</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="descripcionD.html" class="btn btn-primary">Comprar ya</a>
-            </div>
-        
+        </div>
+      </div>
+
+      <div class="col">
+
+        <div class="card shadow-sm text-center" style="width: 18rem;">
+          <img src="./Imagenes_de_Marca/Sudadera.jpeg" class="card-img-top" alt="Camisa1">
+          <div class="card-body">
+            <h5 class="card-title">Sudaderas</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="descripcionD.html" class="btn btn-primary">Comprar ya</a>
           </div>
+
         </div>
+      </div>
 
 
-        <div class="col">
-        
-          <div class="card shadow-sm text-center" style="width: 18rem;">
-            <img src="./Imagenes_de_Marca/Sudadera.jpeg" class="card-img-top" alt="Camisa1">
-            <div class="card-body">
-              <h5 class="card-title">Sudaderas</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="descripcionD.html" class="btn btn-primary">Comprar ya</a>
-            </div>
-        
+      <div class="col">
+
+        <div class="card shadow-sm text-center" style="width: 18rem;">
+          <img src="./Imagenes_de_Marca/Sudadera.jpeg" class="card-img-top" alt="Camisa1">
+          <div class="card-body">
+            <h5 class="card-title">Sudaderas</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="descripcionD.html" class="btn btn-primary">Comprar ya</a>
           </div>
+
         </div>
+      </div>
 
 
-        <div class="col">
-        
-          <div class="card shadow-sm text-center" style="width: 18rem;">
-            <img src="./Imagenes_de_Marca/Sudadera.jpeg" class="card-img-top" alt="Camisa1">
-            <div class="card-body">
-              <h5 class="card-title">Sudaderas</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="descripcionD.html" class="btn btn-primary">Comprar ya</a>
-            </div>
-        
+      <div class="col">
+
+        <div class="card shadow-sm text-center" style="width: 18rem;">
+          <img src="./Imagenes_de_Marca/Sudadera.jpeg" class="card-img-top" alt="Camisa1">
+          <div class="card-body">
+            <h5 class="card-title">Sudaderas</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="descripcionD.html" class="btn btn-primary">Comprar ya</a>
           </div>
+
         </div>
-
-
-
-
-
-
+      </div>
 
 
     </div>
@@ -235,109 +238,109 @@
 
   <div class="grafico2">
     <div class="container text-center">
-      
+
       <div id="piechart_3d" "></div>
     </div>
   </div>
 
 
-  <!-- <div class="grafico2">
-    <div class="container text-center">
-      <h2>Grafico</h2>
-      <div id="piechart_3d" class="Grafico" style="width: 1500px; height: 600px;"></div>
-    </div>
-  </div> -->
-
-
-  <footer class=" text-dark pt-5 pb-4">
-
-    <div class="container text-center text-md-start">
-      <div class="row text-center text-md-start">
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h5 class="text-uppercase mb-4 font-weight-bold ">Nosotros</h5>
-          <hr class="mb-4">
-          <p>
-            Somos una tienda que surgio en el año 2020 a causa de la pandemia decidimos buscar una forma de
-            invertir nuestro tiempo y lograr generar un ingreso extra para sobresalir, nos dedicamos a la
-            venta de prendas de alta calidad con diseños unicos y llamativos para los usuarios
-          </p>
-
+  <!-- <div class=" grafico2">
+        <div class="container text-center">
+          <h2>Grafico</h2>
+          <div id="piechart_3d" class="Grafico" style="width: 1500px; height: 600px;"></div>
         </div>
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h5 class="text-uppercase mb-4 font-weight-bold ">Dejanos ayudarte</h5>
-          <hr class="mb-4">
-          <p>
-            <a href="#" class="text-dark">Productos</a>
+      </div> -->
 
-          </p>
-          <p>
-            <a href="#" class="text-dark">Tu carrito</a>
-          </p>
+
+      <footer class=" text-dark pt-5 pb-4">
+
+        <div class="container text-center text-md-start">
+          <div class="row text-center text-md-start">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold ">Nosotros</h5>
+              <hr class="mb-4">
+              <p>
+                Somos una tienda que surgio en el año 2020 a causa de la pandemia decidimos buscar una forma de
+                invertir nuestro tiempo y lograr generar un ingreso extra para sobresalir, nos dedicamos a la
+                venta de prendas de alta calidad con diseños unicos y llamativos para los usuarios
+              </p>
+
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold ">Dejanos ayudarte</h5>
+              <hr class="mb-4">
+              <p>
+                <a href="#" class="text-dark">Productos</a>
+
+              </p>
+              <p>
+                <a href="#" class="text-dark">Tu carrito</a>
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold ">Ayuda</h5>
+              <hr class="mb-4">
+              <p>
+                <a href="#" class="text-dark">Preguntas Frecuentes</a>
+
+              </p>
+              <p>
+                <a href="#" class="text-dark">Contactanos</a>
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h5 class="text-uppercase mb-4 font-weight-bold ">Contacto</h5>
+              <hr class="mb-4">
+              <p>
+                <li class="fas fa-home me-3"></li> Costa Rica, Grecia 20305
+              </p>
+              <p>
+                <li class="fas fa-envelope me-3"></li> fleycout@gmail.com
+              </p>
+              <p>
+                <li class="fas fa-phone me-3"></li> +506 88888888
+              </p>
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="text-center mb-2">
+              <p>
+                &copy; Todos los derechos reservados
+                <a href="#">
+                  <strong>Bryan Soto</strong>
+                  <strong>Dylan Chacon</strong>
+                </a>
+              </p>
+            </div>
+
+            <div class="text-center">
+              <ul class="list-unstyled list-inline">
+                <li class="list-inline-item">
+                  <a href="https://www.facebook.com/profile.php?id=100011063948125&locale=" target="_blank"
+                    class="text-dark"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" target="_blank" class="text-dark"><i class="fab fa-whatsapp"></i></a>
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
         </div>
-
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h5 class="text-uppercase mb-4 font-weight-bold ">Ayuda</h5>
-          <hr class="mb-4">
-          <p>
-            <a href="#" class="text-dark">Preguntas Frecuentes</a>
-
-          </p>
-          <p>
-            <a href="#" class="text-dark">Contactanos</a>
-          </p>
-        </div>
-
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h5 class="text-uppercase mb-4 font-weight-bold ">Contacto</h5>
-          <hr class="mb-4">
-          <p>
-            <li class="fas fa-home me-3"></li> Costa Rica, Grecia 20305
-          </p>
-          <p>
-            <li class="fas fa-envelope me-3"></li> fleycout@gmail.com
-          </p>
-          <p>
-            <li class="fas fa-phone me-3"></li> +506 88888888
-          </p>
-        </div>
-
-        <hr class="mb-4">
-
-        <div class="text-center mb-2">
-          <p>
-            &copy; Todos los derechos reservados
-            <a href="#">
-              <strong>Bryan Soto</strong>
-              <strong>Dylan Chacon</strong>
-            </a>
-          </p>
-        </div>
-
-        <div class="text-center">
-          <ul class="list-unstyled list-inline">
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/profile.php?id=100011063948125&locale=" target="_blank"
-                class="text-dark"><i class="fab fa-facebook"></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#" target="_blank" class="text-dark"><i class="fab fa-whatsapp"></i></a>
-            </li>
-
-          </ul>
-
-        </div>
-      </div>
-    </div>
-  </footer>
+      </footer>
 
 
 
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
 
 </body>

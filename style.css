@@ -96,17 +96,23 @@ img {
 	max-width: 100%;
 }
 
-header {
+/* header {
 	display: flex;
 	align-items: center;
 	padding: 30px;
 	justify-content: center;
-}
+} */
 
 main {
 	display: flex;
 	gap: 30px;
 	margin-bottom: 80px;
+}
+
+.navbar {
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 .container_title {
@@ -443,3 +449,4 @@ footer {
 	margin-top: 50px;
 	color: #222;
 }
+
