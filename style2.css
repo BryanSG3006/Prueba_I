@@ -100,3 +100,18 @@ background-color: #026852 ;
     font-weight: bold;
     
 }
+
+
+.formulario label {
+    width: 100px;
+    color: #222;
+    font-weight: 700;
+}
+
+.formulario select {
+    width: 300px;
+    border: none;
+    padding: 12px;
+    background-color: #f7f7f7;
+    color: #665;
+}
