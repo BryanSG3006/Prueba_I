@@ -82,36 +82,91 @@ body {
 }
 
 .navbar {
-	font-family: "Roboto", sans-serif;
-	font-size: 20px;
-	font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .product-card {
     background-color: #f5e4dc !important;
 }
 
-.btn-success{
-background-color: #026852 ;
+.btn-success {
+    background-color: #026852;
 }
 
 .precio {
     font-size: 40px;
     font-weight: bold;
-    
+
 }
 
-
-.formulario label {
-    width: 100px;
-    color: #222;
-    font-weight: 700;
+/* Idea 1 */
+.container1 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.25rem;
+    transition: all 400ms;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
 }
 
-.formulario select {
-    width: 300px;
-    border: none;
-    padding: 12px;
-    background-color: #f7f7f7;
-    color: #665;
+.card1 {
+    top: 100px;
+    flex: 1;
+    height: 100%;
+    transition: all 600ms;
+    cursor: pointer;
+}
+
+.card1 img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+.card1 :nth-child(odd) {
+    translate: 0 -20px;
+}
+
+.card1 :nth-child(even) {
+    translate: 0 -20px;
+}
+
+.container1:hover .card1:not(:hover) {
+    filter: grayscale(100%);
+}
+
+.card1:hover {
+    flex: 1.5;
+}
+
+@media (max-width: 460px) {
+
+    .container1 {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 1.25rem;
+        transition: all 400ms;
+        max-width: 1200px;
+        margin: 5px 5px;
+    }
+}
+
+.btn-lg {
+    color: #f5e4dc;
+    background-color: #026852;
+}
+
+.btn-lg:hover{
+background-color: #f5e4dc;
+font-weight: bold;
 }
