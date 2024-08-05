@@ -2,7 +2,7 @@ const productos = [
     {
         "id": 1,
         "nombre": "Camisa oversize blanca",
-        "imagen": "imagen_1.jpg",
+        "imagen": "./img/CamisaBlanca.png",
         "precio": 13498,
         "descripcion": "Esta camisa oversize blanca es perfecta para un look relajado y moderno.",
         "estado": "Nuevo",
@@ -11,7 +11,7 @@ const productos = [
     {
         "id": 2,
         "nombre": "Camisa oversize negra",
-        "imagen": "imagen_2.jpg",
+        "imagen": "./img/CamisaNegra.png",
         "precio": 19387,
         "descripcion": "Esta camisa oversize negra es un básico que no puede faltar en tu armario.",
         "estado": "Nuevo",
@@ -20,25 +20,25 @@ const productos = [
     {
         "id": 3,
         "nombre": "Camisa oversize verde",
-        "imagen": "imagen_3.jpg",
+        "imagen": "./img/CamisaVerde.png",
         "precio": 13666,
-        "descripcion": "Añade un toque de color con esta camisa oversize azul, ideal para cualquier ocasión.",
+        "descripcion": "Añade un toque de color con esta camisa oversize verde, ideal para cualquier ocasión.",
         "estado": "Nuevo",
         "categoria": "Camisas"
     },
     {
         "id": 4,
         "nombre": "Camisa oversize celeste",
-        "imagen": "imagen_4.jpg",
+        "imagen": "./img/CamisaCeleste.png",
         "precio": 15872,
-        "descripcion": "Dale un toque de pasión a tu outfit con esta camisa oversize roja.",
+        "descripcion": "Dale un toque de pasión a tu outfit con esta camisa oversize celeste.",
         "estado": "Nuevo",
         "categoria": "Camisas"
     },
     {
         "id": 5,
-        "nombre": "Camisa oversize verde",
-        "imagen": "imagen_5.jpg",
+        "nombre": "Camisa oversize beige",
+        "imagen": "./img/CamisaBeige.png",
         "precio": 18765,
         "descripcion": "Esta camisa oversize verde te hará destacar con su color vibrante.",
         "estado": "Nuevo",
@@ -47,7 +47,7 @@ const productos = [
     {
         "id": 6,
         "nombre": "Camisa oversize blanca",
-        "imagen": "imagen_6.jpg",
+        "imagen": "./img/CamisaBlanca2.png",
         "precio": 14567,
         "descripcion": "Brilla como el sol con esta camisa oversize blanca.",
         "estado": "Nuevo",
@@ -56,7 +56,7 @@ const productos = [
     {
         "id": 7,
         "nombre": "Gorra roja",
-        "imagen": "imagen_7.jpg",
+        "imagen": "./img/gorraRoja.jpg",
         "precio": 9969,
         "descripcion": "Protege tu rostro del sol con estilo con esta gorra roja.",
         "estado": "Nuevo",
@@ -65,7 +65,7 @@ const productos = [
     {
         "id": 8,
         "nombre": "Gorra azul",
-        "imagen": "imagen_8.jpg",
+        "imagen": "./img/gorraAzul.jpg",
         "precio": 20978,
         "descripcion": "Dale un toque de color a tu atuendo con esta gorra azul vibrante.",
         "estado": "Nuevo",
@@ -74,7 +74,7 @@ const productos = [
     {
         "id": 9,
         "nombre": "Gorra verde",
-        "imagen": "imagen_9.jpg",
+        "imagen": "./img/gorraVerde.jpg",
         "precio": 17589,
         "descripcion": "Complementa tu estilo casual con esta gorra verde.",
         "estado": "Nuevo",
@@ -83,7 +83,7 @@ const productos = [
     {
         "id": 10,
         "nombre": "Gorra negra",
-        "imagen": "imagen_10.jpg",
+        "imagen": "./img/gorraNegra.jpg",
         "precio": 19982,
         "descripcion": "Una gorra negra clásica para cualquier ocasión.",
         "estado": "Nuevo",
@@ -91,55 +91,55 @@ const productos = [
     },
     {
         "id": 11,
-        "nombre": "Gorra gris",
-        "imagen": "imagen_11.jpg",
+        "nombre": "Gorra Verde Claro",
+        "imagen": "./img/gorraVerdeO.jpg",
         "precio": 12234,
-        "descripcion": "Esta gorra gris es el accesorio perfecto para un look moderno.",
+        "descripcion": "Esta gorra verde claro es el accesorio perfecto para un look moderno.",
         "estado": "Nuevo",
         "categoria": "Gorras"
     },
     {
         "id": 12,
-        "nombre": "Gorro de lana negro",
-        "imagen": "imagen_12.jpg",
+        "nombre": "Gorro de lana azul",
+        "imagen": "./img/gorroAzul.jpg",
         "precio": 20091,
-        "descripcion": "Mantén tu cabeza abrigada con este gorro de lana negro, ideal para el invierno.",
+        "descripcion": "Mantén tu cabeza abrigada con este gorro de lana azul, ideal para el invierno.",
         "estado": "Nuevo",
         "categoria": "Gorros"
     },
     {
         "id": 13,
-        "nombre": "Gorro de lana gris",
-        "imagen": "imagen_13.jpg",
+        "nombre": "Gorro de lana verde",
+        "imagen": "./img/gorroVerde1.jpg",
         "precio": 23558,
-        "descripcion": "Este gorro de lana gris es perfecto para un look casual y cómodo.",
+        "descripcion": "Este gorro de lana verde es perfecto para un look casual y cómodo.",
         "estado": "Nuevo",
         "categoria": "Gorros"
     },
     {
         "id": 14,
-        "nombre": "Gorro de lana azul",
-        "imagen": "imagen_14.jpg",
+        "nombre": "Gorro de lana verde claro",
+        "imagen": "./img/gorroVerde2.jpg",
         "precio": 17834,
-        "descripcion": "Mantén el calor con estilo con este gorro de lana azul.",
+        "descripcion": "Mantén el calor con estilo con este gorro de lana verde clara.",
         "estado": "Nuevo",
         "categoria": "Gorros"
     },
     {
         "id": 15,
-        "nombre": "Gorro de lana rojo",
-        "imagen": "imagen_15.jpg",
+        "nombre": "Gorro de lana vino",
+        "imagen": "./img/gorroVino.jpg",
         "precio": 14567,
-        "descripcion": "Destaca en los días fríos con este gorro de lana rojo vibrante.",
+        "descripcion": "Destaca en los días fríos con este gorro de lana vino vibrante.",
         "estado": "Nuevo",
         "categoria": "Gorros"
     },
     {
         "id": 16,
-        "nombre": "Gorro de lana verde",
-        "imagen": "imagen_16.jpg",
+        "nombre": "Gorro de lana morado",
+        "imagen": "./img/gorroMorado.jpg",
         "precio": 16078,
-        "descripcion": "Este gorro de lana verde es el complemento perfecto para tus atuendos invernales.",
+        "descripcion": "Este gorro de lana morada es el complemento perfecto para tus atuendos invernales.",
         "estado": "Nuevo",
         "categoria": "Gorros"
     }
