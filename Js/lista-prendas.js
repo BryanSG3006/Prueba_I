@@ -13,7 +13,7 @@ function displayProducts(data) {
             <h5 class="card-title">${productos.nombre}</h5>
             <p class="card-text">&cent;${productos.precio}</p>
             <div class="d-grid gap-2">
-              <button type="button" class="btn btn-lg  onclick="detalleProducto(${productos.id})">Detalle</button>
+              <button type="button" class="btn btn-lg"  onclick="detalleProducto(${productos.id})">Detalle</button>
             </div>
           </div>
         </div>

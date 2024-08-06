@@ -13,13 +13,13 @@ $(document).ready(function () {
             $("#precio").html("&cent;" + producto.precio);
             $("#descripcion").html("<b>Descripción: </b>" + (producto.descripcion ? producto.descripcion : 'Sin descripción'));
             $("#imagen").attr("src", producto.imagen);
-            $("#estado").text(producto.estado);
+            $("#estado").html(`<b>Estado:</b> ${producto.estado}`);
             $("#categoria").text(producto.categoria);
-            $("#stock").text(`Stock: ${producto.stock}`);
-            $("#tiempoEntrega").text(`Tiempo de entrega: ${producto.tiempoEntrega} días`);
-            $("#gastosEnvio").text(`Gastos de envío: &dollar;${producto.gastosEnvio}`);
-            $("#opcionesEntrega").text(`Opciones de entrega: ${producto.opcionesEntrega}`);
-            $("#garantia").text(`Garantía: ${producto.garantia}`);
+            $("#stock").html(`<b>Stock:</b> ${producto.stock}`);
+            $("#tiempoEntrega").html(`<b>Tiempo de entrega:</b> ${producto.tiempoEntrega} días`);
+            $("#gastosEnvio").html(`<b>Gastos de envío:</b> &cent;${producto.gastosEnvio}`);
+            $("#opcionesEntrega").text(`<b>Opciones de entrega: ${producto.opcionesEntrega}`);
+            $("#garantia").html(`<b>Garantía: ${producto.garantia}`);
 
             // Reseñas
             producto.reseñas.forEach((reseña) => {
