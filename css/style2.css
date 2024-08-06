@@ -49,6 +49,8 @@ body {
 .product-image {
     width: 100%;
     max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product-details {
@@ -166,9 +168,9 @@ body {
     background-color: #026852;
 }
 
-.btn-lg:hover{
-background-color: #f5e4dc;
-font-weight: bold;
+.btn-lg:hover {
+    background-color: #f5e4dc;
+    font-weight: bold;
 }
 
 .texto {
