@@ -318,7 +318,7 @@ const productos = [
     {
         "id": 13,
         "nombre": "Gorro de lana verde",
-        "imagen": "./img/gorroVerde1.jpg",
+        "imagen": "./img/GorroVerde1.jpg",
         "precio": 23558,
         "descripcion": "Este gorro de lana verde es perfecto para un look casual y cómodo.",
         "estado": "Nuevo",
