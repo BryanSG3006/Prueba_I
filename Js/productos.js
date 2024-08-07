@@ -289,6 +289,7 @@ const productos = [
         "id": 12,
         "nombre": "Gorro de lana azul",
         "imagen": "./img/gorroAzul.jpg",
+        "images": ["./img/gorraAzul.jpg", "./img/gorraVerde.jpg", "./img/gorraRoja.jpg"],
         "precio": 20091,
         "descripcion": "Mantén tu cabeza abrigada con este gorro de lana azul, ideal para el invierno.",
         "estado": "Nuevo",

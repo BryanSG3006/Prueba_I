@@ -31,13 +31,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./Productos.html">Catalogo</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 Acerca de
                             </a>
                             <ul class="dropdown-menu">
@@ -68,8 +69,32 @@
         <main class="container-main" id="detalle">
             <div class="row align-items-start">
                 <div class="col-md-5 mb-5">
-                    <img id="imagen" src="./img/image-not-found.jpg" alt="Imagen del producto" class="product-image" role="img">
+                    <img id="imagen" src="./img/image-not-found.jpg" alt="Imagen del producto" class="product-image"
+                        role="img">
+
+
+                   
+
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active mt-5">
+                                <img id="imagen5" src="..." class="d-block w-100 product-image" alt="...">
+                            </div>
+                            <div class="carousel-item active mt-5">
+                                <img id="imagen3" src="..." class="d-block w-100 product-image" alt="...">
+                            </div>
+                            <div class="carousel-item active mt-5">
+                                <img id="imagen4" src="..." class="d-block w-100 product-image" alt="...">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
                 </div>
+
                 <div class="col-md-7">
                     <div class="product-card ">
                         <h2 id="nombre" class="card-title">Nombre de la prenda</h2>
@@ -77,7 +102,8 @@
                         <p id="descripcion" class="texto"><strong>Descripción:</strong></p>
                         <p id="stock" class="texto"><strong>Stock:</strong></p>
                         <p id="estado" class="texto"><strong>Estado:</strong></p>
-                        <p id="informacionCambiosDevoluciones" class="texto"><strong>Cambios o Devoluciones:</strong></p>
+                        <p id="informacionCambiosDevoluciones" class="texto"><strong>Cambios o Devoluciones:</strong>
+                        </p>
                         <p id="enlaceContacto" class="texto"><strong>Sección de Ayuda:</strong></p>
                         <p id="garantia" class="texto"><strong>Estado:</strong></p>
                         <p id="tiempoEntrega" class="texto"><strong>Tiempo de Entrega:</strong></p>
@@ -228,7 +254,7 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    
+
 
     <script src="./Js/productos.js"></script>
     <script src="./Js/detalle-producto.js"></script>

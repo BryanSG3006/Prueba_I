@@ -12,7 +12,14 @@ $(document).ready(function () {
             $("#nombre").text(producto.nombre);
             $("#precio").html("&cent;" + producto.precio);
             $("#descripcion").html("<b>Descripción: </b>" + (producto.descripcion ? producto.descripcion : 'Sin descripción'));
+            // Imagen destacada
             $("#imagen").attr("src", producto.imagen);
+
+            //Galeria de Imagenes
+            $("#imagen3").attr("src", producto.images[0]);
+            $("#imagen4").attr("src", producto.images[1]);
+            $("#imagen5").attr("src", producto.images[2]);
+
             $("#estado").html(`<b>Estado:</b> ${producto.estado}`);
             $("#categoria").text(producto.categoria);
             $("#stock").html(`<b>Stock:</b> ${producto.stock}`);
