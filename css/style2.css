@@ -179,3 +179,23 @@ body {
     color: #026852;
     font-size: 18px;
 }
+
+
+.accordion-button.custom {
+    background-color: #f5e4dc;
+    color: #026852 !important;
+    font-weight: bold;
+}
+
+.accordion-button:not(.custom) {
+    color: #026852 !important;
+    font-weight: bold;
+
+}
+
+.img-personas {
+    width: 1000px !important;
+    height: 700px !important;
+    margin-top: 50px;
+}
+
