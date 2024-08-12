@@ -218,3 +218,21 @@ body {
     border-radius: 10px;
 }
 
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#submit {
+    border: none;
+    background-color: #026852;
+    color: #f5e4dc;
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+#submit:hover {
+    background-color: #333333;
+}
