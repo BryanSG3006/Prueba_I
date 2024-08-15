@@ -1,3 +1,6 @@
+let itemIdToRemove = null; // Variable para almacenar el ID del ítem a eliminar
+let itemElementToUpdate = null; // Variable para almacenar el input del ítem a actualizar
+
 function addToCart(element) {
     let productoParent = $(element).closest('div.card-related-products');
     let id = element.dataset.id;
@@ -25,10 +28,14 @@ function addToCart(element) {
     }
 
     localStorage.setItem('compra', JSON.stringify(cartArray));
-    console.log(JSON.parse(localStorage.getItem('compra')));
-    $.notify("Producto Agregado : " + name, "success");
-}
 
+    Swal.fire({
+        icon: 'success',
+        title: 'Producto Agregado',
+        text: ` ${name} ha sido agregado al carrito.`,
+        confirmButtonText: 'Aceptar'
+    });
+}
 
 function removeCartItem(idProducto) {
     let cartArray = JSON.parse(localStorage.getItem('compra')) || [];
@@ -37,7 +44,14 @@ function removeCartItem(idProducto) {
         if (index !== -1) {
             cartArray.splice(index, 1);
             localStorage.setItem('compra', JSON.stringify(cartArray));
-            $.notify("Producto Eliminado de la Compra", "warn");
+
+            Swal.fire({
+                icon: 'warning',
+                title: 'Producto Eliminado',
+                text: 'El producto ha sido eliminado del carrito.',
+                confirmButtonText: 'Aceptar'
+            });
+
             showDetailShop();
         }
     }
@@ -54,13 +68,9 @@ function updateCartItemQty(element) {
     }
 
     if (quantity <= 0) {
-        // Mostrar el modal de confirmación
-        $('#confirmDeleteModal').modal('show');
-
-        // Almacena el ID y el input actual en los botones del modal
-        $('#confirmDelete').data('idProducto', idProducto);
-        $('#confirmDelete').data('element', element);
-
+        itemIdToRemove = idProducto; // Almacena el ID del ítem a eliminar
+        itemElementToUpdate = element; // Almacena el input actual
+        $('#confirmDeleteModal').modal('show'); // Muestra el modal
         return;
     }
 
@@ -77,19 +87,25 @@ function updateCartItemQty(element) {
 
 // Manejar la confirmación de eliminación en el modal
 $('#confirmDelete').click(function () {
-    let idProducto = $(this).data('idProducto');
-    let element = $(this).data('element');
+    if (itemIdToRemove !== null) {
+        removeCartItem(itemIdToRemove);
+        itemIdToRemove = null; // Resetea el ID del ítem a eliminar
+    } else if (itemElementToUpdate !== null) {
+        // Si la eliminación fue cancelada pero el valor fue actualizado a 0
+        itemElementToUpdate.value = 1; // Reinicia la cantidad a 1
+        itemElementToUpdate = null; // Limpia el input
+    }
 
-    removeCartItem(idProducto);
-
-    // Ocultar el modal después de la acción
-    $('#confirmDeleteModal').modal('hide');
+    $('#confirmDeleteModal').modal('hide'); // Oculta el modal
+    showDetailShop(); // Actualiza la vista del carrito
 });
 
 $('#cancelDelete').click(function () {
     // Reiniciar el valor del input a 1 si se cancela la eliminación
-    let element = $('#confirmDelete').data('element');
-    element.value = 1;
+    if (itemElementToUpdate !== null) {
+        itemElementToUpdate.value = 1;
+        itemElementToUpdate = null; // Limpia el input
+    }
 
     // Ocultar el modal
     $('#confirmDeleteModal').modal('hide');
@@ -114,31 +130,38 @@ function showDetailShop() {
             if (typeof subTotal !== 'number') {
                 console.error("subTotal no es un número:", subTotal);
             }
-            cartRowHTML += `<div class="row mb-4 d-flex justify-content-between align-items-center">
-                                <div class="col-md-3 col-lg-3 col-xl-3">
-                                  <h6 class="text-muted name-producto">${item.name}</h6>
+            cartRowHTML += `<div class="row mb-4 align-items-center">
+                                <div class="col-md-4 col-lg-4 col-xl-4">
+                                    <p class="text-muted mb-0 name-producto">${item.name}</p>
                                 </div>
-                                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                  <input min="0" name="quantity" value="${item.quantity}" type="number" onChange="updateCartItemQty(this)"
-                                    class="form-control form-control-sm quantity-producto" data-id="${item.id}" />
+                                <div class="col-md-2 col-lg-2 col-xl-2">
+                                    <input min="0" name="quantity" value="${item.quantity}" type="number" onChange="updateCartItemQty(this)"
+                                        class="form-control form-control-sm quantity-libro" data-id="${item.id}" />
                                 </div>
-                                <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                  <h6 class="mb-0 price-producto">&cent; ${item.price.toFixed(2)}</h6>
+                                <div class="col-md-2 col-lg-2 col-xl-2">
+                                    <p class="mb-0 price-producto">&dollar; ${item.price.toFixed(2)}</p>
                                 </div>
-                                <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                  <h6 class="mb-0 subtotal-producto">&cent; ${subTotal.toFixed(2)}</h6>
+                                <div class="col-md-2 col-lg-2 col-xl-2">
+                                    <p class="mb-0 subtotal-producto">&dollar; ${subTotal.toFixed(2)}</p>
                                 </div>
-                                <div class="col-md-1 col-lg-1 col-xl-1 ">
-                                  <button type="button" class="btn btn-secondary"><i class="bi bi-trash2-fill" onclick="removeCartItem(${item.id})"></i></button>
+                                <div class="col-md-2 col-lg-2 col-xl-2 text-end">
+                                    <button type="button" class="btn btn-outline-danger btn-sm" onclick="confirmRemoveCartItem(${item.id})">
+                                        <i class="bi bi-trash-fill"></i>
+                                    </button>
                                 </div>
-                              </div>
-                              <hr class="my-4">`;
+                            </div>
+                            <hr class="my-4">`;
 
             total += subTotal;
         });
     }
 
     $('#detail').html(cartRowHTML);
-    $('#total-items').text(itemCount);
-    $('#total-compra').text("₡" + total.toFixed(2));
+    $('#total-items').text(`${itemCount} artículo(s)`);
+    $('#total-compra').text(`₡${total.toFixed(2)}`);
+}
+
+function confirmRemoveCartItem(id) {
+    itemIdToRemove = id; // Almacena el ID del ítem a eliminar
+    $('#confirmDeleteModal').modal('show'); // Muestra el modal
 }
