@@ -1,11 +1,11 @@
-let itemIdToRemove = null; // Variable para almacenar el ID del ítem a eliminar
-let itemElementToUpdate = null; // Variable para almacenar el input del ítem a actualizar
+let itemIdToRemove = null;
+let itemElementToUpdate = null;
 
 function addToCart(element) {
     let productoParent = $(element).closest('div.card-related-products');
     let id = element.dataset.id;
     let priceText = $(productoParent).find('.card-text').text();
-    let price = parseFloat(priceText.replace(/[^0-9.-]+/g, "")); // Asegúrate de que esto sea un número válido
+    let price = parseFloat(priceText.replace(/[^0-9.-]+/g, ""));
     let name = $(productoParent).find('.card-title').text();
 
     let cartItem = {
@@ -63,14 +63,14 @@ function updateCartItemQty(element) {
     let cartArray = JSON.parse(localStorage.getItem('compra')) || [];
 
     if (isNaN(quantity) || quantity === '') {
-        // No hacer nada si el valor es vacío
+        
         return;
     }
 
     if (quantity <= 0) {
-        itemIdToRemove = idProducto; // Almacena el ID del ítem a eliminar
-        itemElementToUpdate = element; // Almacena el input actual
-        $('#confirmDeleteModal').modal('show'); // Muestra el modal
+        itemIdToRemove = idProducto;
+        itemElementToUpdate = element;
+        $('#confirmDeleteModal').modal('show');
         return;
     }
 
@@ -85,29 +85,28 @@ function updateCartItemQty(element) {
     }
 }
 
-// Manejar la confirmación de eliminación en el modal
 $('#confirmDelete').click(function () {
     if (itemIdToRemove !== null) {
         removeCartItem(itemIdToRemove);
-        itemIdToRemove = null; // Resetea el ID del ítem a eliminar
+        itemIdToRemove = null;
     } else if (itemElementToUpdate !== null) {
-        // Si la eliminación fue cancelada pero el valor fue actualizado a 0
-        itemElementToUpdate.value = 1; // Reinicia la cantidad a 1
-        itemElementToUpdate = null; // Limpia el input
+
+        itemElementToUpdate.value = 1;
+        itemElementToUpdate = null;
     }
 
-    $('#confirmDeleteModal').modal('hide'); // Oculta el modal
-    showDetailShop(); // Actualiza la vista del carrito
+    $('#confirmDeleteModal').modal('hide');
+    showDetailShop();
 });
 
 $('#cancelDelete').click(function () {
-    // Reiniciar el valor del input a 1 si se cancela la eliminación
+
     if (itemElementToUpdate !== null) {
         itemElementToUpdate.value = 1;
-        itemElementToUpdate = null; // Limpia el input
+        itemElementToUpdate = null;
     }
 
-    // Ocultar el modal
+
     $('#confirmDeleteModal').modal('hide');
 });
 
@@ -126,7 +125,7 @@ function showDetailShop() {
         itemCount = cart.length;
 
         cart.forEach(function (item) {
-            let subTotal = item.subTotal || 0; // Asegura que subTotal no sea null
+            let subTotal = item.subTotal || 0;
             if (typeof subTotal !== 'number') {
                 console.error("subTotal no es un número:", subTotal);
             }
@@ -162,6 +161,6 @@ function showDetailShop() {
 }
 
 function confirmRemoveCartItem(id) {
-    itemIdToRemove = id; // Almacena el ID del ítem a eliminar
-    $('#confirmDeleteModal').modal('show'); // Muestra el modal
+    itemIdToRemove = id;
+    $('#confirmDeleteModal').modal('show');
 }
