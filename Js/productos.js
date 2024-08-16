@@ -16,11 +16,11 @@ const productos = [
         "reseñas": [
             {
                 "autor": "Luis Arguedas",
-                "comentario": "Excelente calidad y servicio."
+                "comentario": "Excelente calidad y servicio.⭐⭐⭐⭐⭐"
             },
             {
                 "autor": "Esteban Jimenez",
-                "comentario": "Muy satisfecho con el producto."
+                "comentario": "Muy satisfecho con el producto.⭐⭐⭐⭐"
             }
         ],
         "enlaceContacto": "contacto",
@@ -43,11 +43,11 @@ const productos = [
         "reseñas": [
             {
                 "autor": "Luis Arguedas",
-                "comentario": "Excelente calidad y servicio."
+                "comentario": "Excelente calidad y servicio.⭐⭐⭐⭐⭐"
             },
             {
                 "autor": "Esteban Jimenez",
-                "comentario": "Muy satisfecho con el producto."
+                "comentario": "Muy satisfecho con el producto.⭐⭐⭐"
             }
         ],
         "enlaceContacto": "contacto",
@@ -70,11 +70,11 @@ const productos = [
         "reseñas": [
             {
                 "autor": "Luis Arguedas",
-                "comentario": "Excelente calidad y servicio."
+                "comentario": "Excelente calidad y servicio.⭐⭐⭐⭐⭐"
             },
             {
                 "autor": "Esteban Jimenez",
-                "comentario": "Muy satisfecho con el producto."
+                "comentario": "Muy satisfecho con el producto.⭐⭐⭐⭐"
             }
         ],
         "enlaceContacto": "contacto",
@@ -97,11 +97,11 @@ const productos = [
         "reseñas": [
             {
                 "autor": "Luis Arguedas",
-                "comentario": "Excelente calidad y servicio."
+                "comentario": "Excelente calidad y servicio.⭐⭐⭐⭐"
             },
             {
                 "autor": "Esteban Jimenez",
-                "comentario": "Muy satisfecho con el producto."
+                "comentario": "Muy satisfecho con el producto.⭐⭐⭐⭐⭐"
             }
         ],
         "enlaceContacto": "contacto",
@@ -124,11 +124,11 @@ const productos = [
         "reseñas": [
             {
                 "autor": "Luis Arguedas",
-                "comentario": "Excelente calidad y servicio."
+                "comentario": "Excelente calidad y servicio.⭐⭐⭐⭐"
             },
             {
                 "autor": "Esteban Jimenez",
-                "comentario": "Muy satisfecho con el producto."
+                "comentario": "Muy satisfecho con el producto.⭐⭐⭐⭐⭐"
             }
         ],
         "enlaceContacto": "contacto",
@@ -151,11 +151,11 @@ const productos = [
         "reseñas": [
             {
                 "autor": "Luis Arguedas",
-                "comentario": "Excelente calidad y servicio."
+                "comentario": "Excelente calidad y servicio.⭐⭐⭐⭐⭐"
             },
             {
                 "autor": "Esteban Jimenez",
-                "comentario": "Muy satisfecho con el producto."
+                "comentario": "Muy satisfecho con el producto sin embargo se podria mejorar.⭐⭐⭐"
             }
         ],
         "enlaceContacto": "contacto",
@@ -178,11 +178,11 @@ const productos = [
         "reseñas": [
             {
                 "autor": "Luis Arguedas",
-                "comentario": "Excelente calidad y servicio."
+                "comentario": "Excelente calidad y servicio.⭐⭐⭐⭐⭐"
             },
             {
                 "autor": "Esteban Jimenez",
-                "comentario": "Muy satisfecho con el producto."
+                "comentario": "Muy satisfecho con el producto.⭐⭐⭐⭐"
             }
         ],
         "enlaceContacto": "contacto",
@@ -205,11 +205,11 @@ const productos = [
         "reseñas": [
             {
                 "autor": "Luis Arguedas",
-                "comentario": "Excelente calidad y servicio."
+                "comentario": "Excelente calidad y servicio.⭐⭐⭐⭐"
             },
             {
                 "autor": "Esteban Jimenez",
-                "comentario": "Muy satisfecho con el producto."
+                "comentario": "Muy satisfecho con el producto.⭐⭐⭐⭐⭐"
             }
         ],
         "enlaceContacto": "contacto",
@@ -232,11 +232,11 @@ const productos = [
         "reseñas": [
             {
                 "autor": "Luis Arguedas",
-                "comentario": "Excelente calidad y servicio."
+                "comentario": "Excelente calidad pero me quedo ajustada.⭐⭐⭐"
             },
             {
                 "autor": "Esteban Jimenez",
-                "comentario": "Muy satisfecho con el producto."
+                "comentario": "Muy satisfecho con el producto.⭐⭐⭐"
             }
         ],
         "enlaceContacto": "contacto",
@@ -259,11 +259,11 @@ const productos = [
         "reseñas": [
             {
                 "autor": "Luis Arguedas",
-                "comentario": "Excelente calidad y servicio."
+                "comentario": "Excelente calidad y servicio.⭐⭐⭐⭐"
             },
             {
                 "autor": "Esteban Jimenez",
-                "comentario": "Muy satisfecho con el producto."
+                "comentario": "Muy satisfecho con el producto.⭐⭐⭐⭐⭐"
             }
         ],
         "enlaceContacto": "contacto",
@@ -286,11 +286,11 @@ const productos = [
         "reseñas": [
             {
                 "autor": "Luis Arguedas",
-                "comentario": "Excelente calidad y servicio."
+                "comentario": "Excelente calidad y servicio.⭐⭐⭐⭐"
             },
             {
                 "autor": "Esteban Jimenez",
-                "comentario": "Muy satisfecho con el producto."
+                "comentario": "Muy satisfecho con el producto.⭐⭐⭐"
             }
         ],
         "enlaceContacto": "contacto",
@@ -313,15 +313,11 @@ const productos = [
         "reseñas": [
             {
                 "autor": "Luis Arguedas",
-                "comentario": "Excelente calidad y servicio."
+                "comentario": "Excelente calidad y servicio.⭐⭐⭐⭐⭐"
             },
             {
                 "autor": "Esteban Jimenez",
-                "comentario": "Muy satisfecho con el producto."
-            },
-            {
-                "autor": "Carlos Méndez",
-                "comentario": "Prueba BB"
+                "comentario": "Muy satisfecho con el producto.⭐⭐⭐"
             }
         ],
         "enlaceContacto": "contacto",
@@ -344,11 +340,11 @@ const productos = [
         "reseñas": [
             {
                 "autor": "Luis Arguedas",
-                "comentario": "Excelente calidad y servicio."
+                "comentario": "Excelente calidad y servicio.⭐⭐⭐⭐⭐"
             },
             {
                 "autor": "Esteban Jimenez",
-                "comentario": "Muy satisfecho con el producto."
+                "comentario": "No me gusto, muy caliente.⭐⭐"
             }
         ],
         "enlaceContacto": "contacto",
@@ -371,11 +367,11 @@ const productos = [
         "reseñas": [
             {
                 "autor": "Luis Arguedas",
-                "comentario": "Excelente calidad y servicio."
+                "comentario": "Excelente calidad y servicio.⭐⭐⭐⭐"
             },
             {
                 "autor": "Esteban Jimenez",
-                "comentario": "Muy satisfecho con el producto."
+                "comentario": "Muy satisfecho con el producto. ⭐⭐⭐⭐"
             }
         ],
         "enlaceContacto": "contacto",
@@ -398,11 +394,11 @@ const productos = [
         "reseñas": [
             {
                 "autor": "Luis Arguedas",
-                "comentario": "Excelente calidad y servicio."
+                "comentario": "Excelente calidad y servicio.⭐⭐⭐⭐"
             },
             {
                 "autor": "Esteban Jimenez",
-                "comentario": "Muy satisfecho con el producto."
+                "comentario": "Muy satisfecho con el producto pero el precio elevado. ⭐⭐⭐"
             }
         ],
         "enlaceContacto": "contacto",
@@ -416,7 +412,7 @@ const productos = [
         "precio": 16000,
         "descripcion": "Este gorro de lana morada es el complemento perfecto para tus atuendos invernales.",
         "estado": "Nuevo",
-        "categoria": "Gorros",
+        "categoria": "Gorros", 
         "stock": "Disponible",
         "tiempoEntrega": 1,
         "gastosEnvio": 134,
@@ -425,11 +421,11 @@ const productos = [
         "reseñas": [
             {
                 "autor": "Luis Arguedas",
-                "comentario": "Excelente calidad y servicio."
+                "comentario": "Excelente calidad y servicio.⭐⭐⭐⭐⭐"
             },
             {
                 "autor": "Esteban Jimenez",
-                "comentario": "Muy satisfecho con el producto."
+                "comentario": "Muy satisfecho con el producto. ⭐⭐⭐⭐"
             }
         ],
         "enlaceContacto": "contacto",

@@ -27,7 +27,7 @@ function displayProducts(data, categoria = '') {
 function filterProducts() {
   var input = document.getElementById('search-input').value.toLowerCase();
   displayProducts(productos, input);
-  return false; // Evitar que el formulario recargue la página
+  return false; 
 }
 
 
