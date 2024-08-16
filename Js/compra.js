@@ -303,21 +303,22 @@ function showInvoice() {
     if (cart.length > 0) {
         let { invoiceNumber, documentNumber } = getNextInvoiceNumbers();
 
-        invoiceHTML += `<div class="invoice-header">
-                            <h1>Factura</h1>
+        invoiceHTML += `<div class="invoice-header text-center mb-4">
+                            <h1 class="fw-bold">Factura</h1>
                             <p><strong>Número de Factura:</strong> ${invoiceNumber}</p>
                             <p><strong>Número de Documento:</strong> ${documentNumber}</p>
                         </div>
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Nombre del Producto</th>
-                                    <th>Cantidad</th>
-                                    <th>Precio</th>
-                                    <th>Subtotal</th>
-                                </tr>
-                            </thead>
-                            <tbody>`;
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr class="table-primary text-center">
+                                        <th>Nombre del Producto</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio</th>
+                                        <th>Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>`;
 
         cart.forEach(function (item) {
             let subTotal = item.subTotal || 0;
@@ -326,9 +327,9 @@ function showInvoice() {
             }
             invoiceHTML += `<tr>
                                 <td>${item.name}</td>
-                                <td>${item.quantity}</td>
-                                <td>&dollar; ${item.price.toFixed(2)}</td>
-                                <td>&dollar; ${subTotal.toFixed(2)}</td>
+                                <td class="text-center">${item.quantity}</td>
+                                <td class="text-end">&dollar; ${item.price.toFixed(2)}</td>
+                                <td class="text-end">&dollar; ${subTotal.toFixed(2)}</td>
                             </tr>`;
 
             total += subTotal;
@@ -336,11 +337,12 @@ function showInvoice() {
 
         invoiceHTML += `</tbody>
                         </table>
-                        <div class="invoice-total">
+                        </div>
+                        <div class="invoice-total text-end mt-4">
                             <h3>Total: &dollar; ${total.toFixed(2)}</h3>
                         </div>
-                        <div class="invoice-footer">
-                            <p>Gracias por su compra. Para cualquier consulta, contáctenos en [email@example.com].</p>
+                        <div class="invoice-footer text-center mt-4">
+                            <p>Gracias por su compra. Para cualquier consulta, contáctenos en fleycout@gmail.com o mediante nuestro formulario de contacto.</p>
                         </div>`;
 
         // Mostrar la factura
@@ -353,4 +355,5 @@ function showInvoice() {
         alert('El carrito está vacío.');
     }
 }
+
 
