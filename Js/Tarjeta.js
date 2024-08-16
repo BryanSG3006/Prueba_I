@@ -6,9 +6,9 @@ document.getElementById('fetchButton').addEventListener('click', function () {
             .then(data => {
                 let logo = '';
                 if (data.Scheme.toLowerCase() === 'visa') {
-                    logo = '<img src="./Img/Visa.jpeg" alt="Visa" />';
+                    logo = '<img src="./img/Visa.jpeg" alt="Visa" />';
                 } else if (data.Scheme.toLowerCase() === 'mastercard') {
-                    logo = '<img src="./Img/Mastercard.png" alt="MasterCard" />';
+                    logo = '<img src="./img/Mastercard.png" alt="MasterCard" />';
                 }
 
                 document.getElementById('result').innerHTML = `
