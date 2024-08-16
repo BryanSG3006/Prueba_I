@@ -237,3 +237,14 @@ input {
     background-color: #333333;
 }
 
+a:hover{
+    color: #026852
+    
+    
+}
+
+a{
+    color: #026852;
+    font-weight: bold !important;
+}
+

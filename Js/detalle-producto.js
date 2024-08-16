@@ -90,10 +90,10 @@ $(document).ready(function () {
             });
 
             // Enlace de contacto
-            $("#enlaceContacto").attr("href", producto.enlaceContacto).text("Contactar");
+            $("#enlaceContacto").attr("href", "Contacto.html", producto.enlaceContacto).text("Contactar");
 
             // Información sobre cambios y devoluciones
-            $("#informacionCambiosDevoluciones").attr("href", producto.informacionCambiosDevoluciones).text("Cambios y devoluciones");
+            $("#informacionCambiosDevoluciones").attr("href", "q&a.html").text("Cambios y devoluciones");
         }
     }
 });
