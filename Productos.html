@@ -62,9 +62,10 @@
 
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    <form class="d-flex" role="search" onsubmit="return filterProducts()">
+                        <input class="form-control me-2" id="search-input" type="search"
+                            placeholder="Buscar por categoría" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
                 </div>
             </div>
@@ -174,9 +175,12 @@
                     <h5 class="text-uppercase mb-4 font-weight-bold ">Nosotros</h5>
                     <hr class="mb-4">
                     <p>
-                        Somos una tienda que surgio en el año 2020 a causa de la pandemia decidimos buscar una forma de
-                        invertir nuestro tiempo y lograr generar un ingreso extra para sobresalir, nos dedicamos a la
-                        venta de prendas de alta calidad con diseños unicos y llamativos para los usuarios
+                        Somos una tienda que nació en 2020 como una respuesta a la pandemia. Decidimos invertir nuestro
+                        tiempo en este proyecto
+                        con el objetivo de generar un ingreso adicional y destacarnos en el mercado. Nos especializamos
+                        en la venta de prendas
+                        de alta calidad, con diseños únicos y llamativos que buscan satisfacer las necesidades y gustos
+                        de nuestros clientes.
                     </p>
 
                 </div>
