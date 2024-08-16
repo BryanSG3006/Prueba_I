@@ -35,6 +35,8 @@ function addToCart(element) {
         text: ` ${name} ha sido agregado al carrito.`,
         confirmButtonText: 'Aceptar'
     });
+
+    showDetailShop2();
 }
 
 function removeCartItem(idProducto) {
@@ -147,6 +149,42 @@ function showDetailShop() {
                                     <button type="button" class="btn btn-outline-danger btn-sm" onclick="confirmRemoveCartItem(${item.id})">
                                         <i class="bi bi-trash-fill"></i>
                                     </button>
+                                </div>
+                            </div>
+                            <hr class="my-4">`;
+
+            total += subTotal;
+        });
+    }
+
+    $('#detail').html(cartRowHTML);
+    $('#total-items').text(`${itemCount} artículo(s)`);
+    $('#total-compra').text(`₡${total.toFixed(2)}`);
+}
+
+function showDetailShop2() {
+    let cartRowHTML = "";
+    let itemCount = 0;
+    let total = 0;
+
+    let cart = JSON.parse(localStorage.getItem('compra')) || [];
+    if (cart.length > 0) {
+        itemCount = cart.length;
+
+        cart.forEach(function (item) {
+            let subTotal = item.subTotal || 0;
+            if (typeof subTotal !== 'number') {
+                console.error("subTotal no es un número:", subTotal);
+            }
+            cartRowHTML += `<div class="row mb-4 align-items-center">
+                                <div class="col-md-4 col-lg-4 col-xl-4">
+                                    <p class="text-muted mb-0 name-producto">${item.name}</p>
+                                </div>
+                                <div class="col-md-2 col-lg-2 col-xl-4">
+                                    <p class="mb-0 price-producto">&dollar; ${item.price.toFixed(2)}</p>
+                                </div>
+                                <div class="col-md-2 col-lg-2 col-xl-4">
+                                    <p class="mb-0 subtotal-producto">&dollar; ${subTotal.toFixed(2)}</p>
                                 </div>
                             </div>
                             <hr class="my-4">`;
