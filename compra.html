@@ -74,7 +74,7 @@
     </header>
 
     <main class="container-fluid p-4">
-    
+
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
@@ -99,7 +99,7 @@
                                     <h6 class="fw-bold">Subtotal</h6>
                                 </div>
                                 <div class="col-md-2 col-lg-2 col-xl-2 text-end">
-    
+
                                 </div>
                             </div>
                             <hr class="my-4">
@@ -120,8 +120,8 @@
                                         <p class="mb-0 subtotal-producto">&cent; 15.00</p>
                                     </div>
                                     <div class="col-md-2 col-lg-2 col-xl-2 text-end">
-                                        <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#confirmDeleteModal">
+                                        <button type="button" class="btn btn-outline-danger btn-sm"
+                                            data-bs-toggle="modal" data-bs-target="#confirmDeleteModal">
                                             <i class="bi bi-trash-fill"></i>
                                         </button>
                                     </div>
@@ -141,14 +141,16 @@
                                 <a href="Productos.html" class="btn btn-outline-primary">
                                     <i class="fas fa-arrow-left me-2"></i> Regresar a comprar
                                 </a>
-                                <!-- You can add another button here if needed -->
+                                <a href="Productos.html" class="btn btn-outline-primary ms-auto">
+                                    Continuar compra <i class="fas fa-arrow-right ms-2"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    
+
         <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteLabel"
             aria-hidden="true">
             <div class="modal-dialog">
@@ -168,8 +170,17 @@
             </div>
         </div>
 
-        
+
     </main>
+
+    <!-- Botón para mostrar la factura -->
+    <button type="button" class="btn btn-primary" onclick="showInvoice()">Mostrar Factura</button>
+
+    <!-- Sección para mostrar la factura -->
+    <div id="invoice" class=" invoice-container container mt-4">
+        <!-- Aquí se generará la factura -->
+    </div>
+
 
 
     <footer class=" text-dark pt-5 pb-4 mt-5">
@@ -266,7 +277,7 @@
     <!-- JQuery-->
     <script src="https://code.jquery.com/jquery-3.7.1.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
- 
+
     <script src="./Js/compra.js"></script>
     <script>
         $(document).ready(function () {

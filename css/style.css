@@ -216,6 +216,7 @@ main {
 .container-details-product {
 	padding: 30px 0;
 }
+
 /* 
 .formulario {
 	display: flex;
@@ -458,3 +459,91 @@ footer {
 
 
 
+.invoice-container {
+	width: 80%;
+	max-width: 900px;
+	margin: 30px auto;
+	padding: 20px;
+	font-family: 'Arial', sans-serif;
+	border: 1px solid #d0d0d0;
+	border-radius: 8px;
+	background-color: #ffffff;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-header {
+	text-align: center;
+	margin-bottom: 30px;
+	border-bottom: 3px solid #026852;
+	/* Verde oscuro */
+	padding-bottom: 15px;
+}
+
+.invoice-header h1 {
+	font-size: 2.5rem;
+	color: #026852;
+	/* Verde oscuro */
+	font-weight: 700;
+}
+
+.invoice-header p {
+	font-size: 1.1rem;
+	color: #555;
+}
+
+
+.table {
+	width: 100%;
+	margin-bottom: 20px;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+.table th,
+.table td {
+	padding: 15px;
+	text-align: left;
+	border-bottom: 1px solid #d0d0d0;
+	font-size: 1rem;
+}
+
+.table th {
+	background-color: #026852;
+	color: #f5e4dc;
+	font-weight: 600;
+}
+
+.table tr:nth-child(even) {
+	background-color: #f5e4dc;
+}
+
+.table tr:hover {
+	background-color: #eaeaea;
+}
+
+
+.invoice-total {
+	text-align: right;
+	margin-top: 20px;
+}
+
+.invoice-total h3 {
+	font-size: 1.75rem;
+	color: #026852;
+	font-weight: 700;
+}
+
+.invoice-footer {
+	text-align: center;
+	margin-top: 30px;
+	padding-top: 15px;
+	border-top: 1px solid #d0d0d0;
+	font-size: 0.9rem;
+	color: #777;
+}
+
+.btn {
+	border-radius: 4px;
+	font-size: 1rem;
+	font-weight: 600;
+}
