@@ -140,10 +140,10 @@ function showDetailShop() {
                                         class="form-control form-control-sm quantity-libro" data-id="${item.id}" />
                                 </div>
                                 <div class="col-md-2 col-lg-2 col-xl-2">
-                                    <p class="mb-0 price-producto">&dollar; ${item.price.toFixed(2)}</p>
+                                    <p class="mb-0 price-producto">&cent; ${item.price.toFixed(2)}</p>
                                 </div>
                                 <div class="col-md-2 col-lg-2 col-xl-2">
-                                    <p class="mb-0 subtotal-producto">&dollar; ${subTotal.toFixed(2)}</p>
+                                    <p class="mb-0 subtotal-producto">&cent; ${subTotal.toFixed(2)}</p>
                                 </div>
                                 <div class="col-md-2 col-lg-2 col-xl-2 text-end">
                                     <button type="button" class="btn btn-outline-danger btn-sm" onclick="confirmRemoveCartItem(${item.id})">
@@ -181,10 +181,10 @@ function showDetailShop2() {
                                     <p class="text-muted mb-0 name-producto">${item.name}</p>
                                 </div>
                                 <div class="col-md-2 col-lg-2 col-xl-4">
-                                    <p class="mb-0 price-producto">&dollar; ${item.price.toFixed(2)}</p>
+                                    <p class="mb-0 price-producto">&cent; ${item.price.toFixed(2)}</p>
                                 </div>
                                 <div class="col-md-2 col-lg-2 col-xl-4">
-                                    <p class="mb-0 subtotal-producto">&dollar; ${subTotal.toFixed(2)}</p>
+                                    <p class="mb-0 subtotal-producto">&cent; ${subTotal.toFixed(2)}</p>
                                 </div>
                             </div>
                             <hr class="my-4">`;
@@ -328,8 +328,8 @@ function showInvoice() {
             invoiceHTML += `<tr>
                                 <td>${item.name}</td>
                                 <td class="text-center">${item.quantity}</td>
-                                <td class="text-end">&dollar; ${item.price.toFixed(2)}</td>
-                                <td class="text-end">&dollar; ${subTotal.toFixed(2)}</td>
+                                <td class="text-end">&cent; ${item.price.toFixed(2)}</td>
+                                <td class="text-end">&cent; ${subTotal.toFixed(2)}</td>
                             </tr>`;
 
             total += subTotal;
@@ -339,7 +339,7 @@ function showInvoice() {
                         </table>
                         </div>
                         <div class="invoice-total text-end mt-4">
-                            <h3>Total: &dollar; ${total.toFixed(2)}</h3>
+                            <h3>Total: &cent; ${total.toFixed(2)}</h3>
                         </div>
                         <div class="invoice-footer text-center mt-4">
                             <p>Gracias por su compra. Para cualquier consulta, contáctenos en fleycout@gmail.com o mediante nuestro formulario de contacto.</p>

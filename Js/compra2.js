@@ -178,7 +178,7 @@ function showDetailShop2() {
                                     <p class="mb-0 price-producto">&cent; ${item.price.toFixed(2)}</p>
                                 </div>
                                 <div class="col-md-2 col-lg-2 col-xl-4">
-                                    <p class="mb-0 subtotal-producto">&dollar; ${subTotal.toFixed(2)}</p>
+                                    <p class="mb-0 subtotal-producto">&cent; ${subTotal.toFixed(2)}</p>
                                 </div>
                                 
                             </div>
