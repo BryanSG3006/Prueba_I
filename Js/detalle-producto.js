@@ -93,7 +93,7 @@ $(document).ready(function () {
             $("#enlaceContacto").attr("href", "Contacto.html", producto.enlaceContacto).text("Contactar");
 
             // Información sobre cambios y devoluciones
-            $("#informacionCambiosDevoluciones").attr("href", "q&a.html").text("Cambios y devoluciones");
+            $("#informacionCambiosDevoluciones").attr("href", "Terminos&Condiciones.html").text("Cambios y devoluciones");
         }
     }
 });

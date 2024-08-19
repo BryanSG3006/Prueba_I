@@ -137,6 +137,28 @@
                                     <h4 class="mb-0 text-end" id="total-compra">&cent;15.00</h4>
                                 </div>
                             </div>
+                            <div class="d-flex justify-content-between mt-3">
+                                <p class="fs-5">Método de entrega</p>
+                                <div class="d-flex flex-column">
+                                    <div>
+                                        <input type="radio" id="envio" name="metodoEntrega" value="envio" onchange="actualizarMetodoEntrega(this)"
+                                            onclick="crearform(this)">
+                                        <label for="envio">Envío</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="retiro" name="metodoEntrega" value="retiro" onchange="actualizarMetodoEntrega(this)"
+                                            onclick="crearform(this)">
+                                        <label for="retiro">Retiro en tienda</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
                             <div class="d-flex justify-content-between mt-5">
                                 <a href="Productos.html" class="btn btn-outline-primary">
                                     <i class="fas fa-arrow-left me-2"></i> Regresar a comprar

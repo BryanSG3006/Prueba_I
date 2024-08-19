@@ -1,5 +1,6 @@
 let itemIdToRemove = null;
 let itemElementToUpdate = null;
+const envioCosto = 5000;
 
 function addToCart(element) {
     let productoParent = $(element).closest('div.card-related-products');
@@ -17,7 +18,6 @@ function addToCart(element) {
     };
 
     let cartArray = JSON.parse(localStorage.getItem('compra')) || [];
-
     let itemIndex = cartArray.findIndex((producto) => producto.id == id);
 
     if (itemIndex != -1) {
@@ -32,7 +32,7 @@ function addToCart(element) {
     Swal.fire({
         icon: 'success',
         title: 'Producto Agregado',
-        text: ` ${name} ha sido agregado al carrito.`,
+        text: `${name} ha sido agregado al carrito.`,
         confirmButtonText: 'Aceptar'
     });
 
@@ -65,7 +65,6 @@ function updateCartItemQty(element) {
     let cartArray = JSON.parse(localStorage.getItem('compra')) || [];
 
     if (isNaN(quantity) || quantity === '') {
-        
         return;
     }
 
@@ -92,7 +91,6 @@ $('#confirmDelete').click(function () {
         removeCartItem(itemIdToRemove);
         itemIdToRemove = null;
     } else if (itemElementToUpdate !== null) {
-
         itemElementToUpdate.value = 1;
         itemElementToUpdate = null;
     }
@@ -102,12 +100,10 @@ $('#confirmDelete').click(function () {
 });
 
 $('#cancelDelete').click(function () {
-
     if (itemElementToUpdate !== null) {
         itemElementToUpdate.value = 1;
         itemElementToUpdate = null;
     }
-
 
     $('#confirmDeleteModal').modal('hide');
 });
@@ -117,20 +113,33 @@ function emptyCart() {
     showDetailShop();
 }
 
+function actualizarMetodoEntrega(input) {
+    const envioContainer = $("#envioContainer");
+    const costoEnvio = $("#envioCosto");
+
+    if (input.value === "envio") {
+        envioContainer.show();
+        localStorage.setItem("costoEnvio", envioCosto);
+    } else if (input.value === "retiro") {
+        envioContainer.hide();
+        localStorage.removeItem("costoEnvio");
+    }
+    showDetailShop();
+}
+
 function showDetailShop() {
     let cartRowHTML = "";
     let itemCount = 0;
     let total = 0;
 
     let cart = JSON.parse(localStorage.getItem('compra')) || [];
+    let envio = parseFloat(localStorage.getItem("costoEnvio")) || 0;
+
     if (cart.length > 0) {
         itemCount = cart.length;
 
         cart.forEach(function (item) {
             let subTotal = item.subTotal || 0;
-            if (typeof subTotal !== 'number') {
-                console.error("subTotal no es un número:", subTotal);
-            }
             cartRowHTML += `<div class="row mb-4 align-items-center">
                                 <div class="col-md-4 col-lg-4 col-xl-4">
                                     <p class="text-muted mb-0 name-producto">${item.name}</p>
@@ -155,6 +164,19 @@ function showDetailShop() {
 
             total += subTotal;
         });
+
+        if (envio > 0) {
+            cartRowHTML += `<div class="row mb-4 align-items-center">
+                                <div class="col-md-8 col-lg-8 col-xl-8 text-end">
+                                    <p class="text-muted mb-0">Costo de Envío:</p>
+                                </div>
+                                <div class="col-md-2 col-lg-2 col-xl-2">
+                                    <p class="mb-0 envio-cost">&cent; ${envio.toFixed(2)}</p>
+                                </div>
+                            </div>
+                            <hr class="my-4">`;
+            total += envio;
+        }
     }
 
     $('#detail').html(cartRowHTML);
@@ -202,68 +224,6 @@ function confirmRemoveCartItem(id) {
     itemIdToRemove = id;
     $('#confirmDeleteModal').modal('show');
 }
-
-// function showInvoice() {
-//     let invoiceHTML = "";
-//     let cart = JSON.parse(localStorage.getItem('compra')) || [];
-//     let total = 0;
-
-//     if (cart.length > 0) {
-//         invoiceHTML += `<h2>Factura</h2>
-//                         <div class="row mb-4">
-//                             <div class="col-md-4 col-lg-4 col-xl-4"><strong>Nombre del Producto</strong></div>
-//                             <div class="col-md-2 col-lg-2 col-xl-2"><strong>Cantidad</strong></div>
-//                             <div class="col-md-2 col-lg-2 col-xl-2"><strong>Precio</strong></div>
-//                             <div class="col-md-2 col-lg-2 col-xl-2"><strong>Subtotal</strong></div>
-//                         </div>
-//                         <hr class="my-4">`;
-
-//         cart.forEach(function (item) {
-//             let subTotal = item.subTotal || 0;
-//             if (typeof subTotal !== 'number') {
-//                 console.error("subTotal no es un número:", subTotal);
-//             }
-//             invoiceHTML += `<div class="row mb-4 align-items-center">
-//                                 <div class="col-md-4 col-lg-4 col-xl-4">
-//                                     <p class="text-muted mb-0">${item.name}</p>
-//                                 </div>
-//                                 <div class="col-md-2 col-lg-2 col-xl-2">
-//                                     <p class="mb-0">${item.quantity}</p>
-//                                 </div>
-//                                 <div class="col-md-2 col-lg-2 col-xl-2">
-//                                     <p class="mb-0">&dollar; ${item.price.toFixed(2)}</p>
-//                                 </div>
-//                                 <div class="col-md-2 col-lg-2 col-xl-2">
-//                                     <p class="mb-0">&dollar; ${subTotal.toFixed(2)}</p>
-//                                 </div>
-//                             </div>
-//                             <hr class="my-4">`;
-
-//             total += subTotal;
-//         });
-
-//         invoiceHTML += `<div class="row mb-4">
-//                             <div class="col-md-8 col-lg-8 col-xl-8 text-end">
-//                                 <h4>Total:</h4>
-//                             </div>
-//                             <div class="col-md-4 col-lg-4 col-xl-4">
-//                                 <h4>&dollar; ${total.toFixed(2)}</h4>
-//                             </div>
-//                         </div>`;
-
-//         // Mostrar la factura
-//         $('#invoice').html(invoiceHTML).show();
-
-//         // Limpiar el carrito
-//         localStorage.removeItem('compra');
-//         showDetailShop(); // Actualizar la vista del carrito
-//     } else {
-//         alert('El carrito está vacío.');
-//     }
-// }
-
-
-// Inicializa los números si no están en localStorage
 function initializeInvoiceNumbers() {
     if (!localStorage.getItem('invoiceNumber')) {
         localStorage.setItem('invoiceNumber', '1000'); // Empieza en 1000, por ejemplo
@@ -335,6 +295,16 @@ function showInvoice() {
             total += subTotal;
         });
 
+        // Verificar si hay un costo de envío almacenado en localStorage
+        let envio = parseFloat(localStorage.getItem("costoEnvio")) || 0;
+        if (envio > 0) {
+            invoiceHTML += `<tr>
+                                <td colspan="3" class="text-end"><strong>Costo de Envío</strong></td>
+                                <td class="text-end">&cent; ${envio.toFixed(2)}</td>
+                            </tr>`;
+            total += envio;
+        }
+
         invoiceHTML += `</tbody>
                         </table>
                         </div>
@@ -348,12 +318,12 @@ function showInvoice() {
         // Mostrar la factura
         $('#invoice').html(invoiceHTML).show();
 
-        // Limpiar el carrito
+        // Limpiar el carrito y el costo de envío
         localStorage.removeItem('compra');
+        localStorage.removeItem('costoEnvio');
         showDetailShop(); // Actualizar la vista del carrito
     } else {
         alert('El carrito está vacío.');
     }
 }
-
 
