@@ -4,7 +4,7 @@ google.charts.setOnLoadCallback(drawChart);
 // Cargar los datos desde un archivo JSON
 async function cargarDatos() {
   try {
-    const respuesta = await fetch('/Grafico.json'); // Asegúrate de que 'grafico.json' esté en la misma carpeta que tu HTML
+    const respuesta = await fetch('/json/Grafico.json'); // Asegúrate de que 'grafico.json' esté en la misma carpeta que tu HTML
     const datos = await respuesta.json();
     return datos;
   } catch (error) {
