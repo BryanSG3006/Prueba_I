@@ -312,7 +312,7 @@ function showInvoice() {
                             <h3>Total: &cent; ${total.toFixed(2)}</h3>
                         </div>
                         <div class="invoice-footer text-center mt-4">
-                            <p>Gracias por su compra. Para cualquier consulta, contáctenos en fleycout@gmail.com o mediante nuestro formulario de contacto.</p>
+                            <p>Gracias por su compra. Para cualquier consulta, contáctenos en fleycoutoficial@gmail.com o mediante nuestro formulario de contacto.</p>
                         </div>`;
 
         // Mostrar la factura
