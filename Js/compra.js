@@ -323,7 +323,12 @@ function showInvoice() {
         localStorage.removeItem('costoEnvio');
         showDetailShop(); // Actualizar la vista del carrito
     } else {
-        alert('El carrito está vacío.');
+        Swal.fire({
+            icon: 'warning',
+            title: 'Carrito Vacio',
+            text: 'No hay factura para mostrar porque el carrito esta vacio.',
+            confirmButtonText: 'Aceptar'
+        });
     }
 }
 
